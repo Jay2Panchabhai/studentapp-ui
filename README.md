@@ -1,5 +1,12 @@
-https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
-https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
+## 📥 Downloads
+
+Download the required files before deployment:
+
+- **Student WAR File**  
+  https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
+
+- **MySQL Connector JAR**  
+  https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
 
 sudo apt install openjdk-11-jre-headless -y
 
