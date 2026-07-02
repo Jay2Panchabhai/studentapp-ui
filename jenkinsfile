@@ -91,6 +91,21 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy to EKS') {
+            steps {
+                sh '''
+                aws eks update-kubeconfig --name my-cluster-mayur --region us-east-2
+                kubectl apply -f student-deploy-svc.yaml
+                kubectl get pods
+                sleep 30
+                kubectl get svc
+                '''
+                echo 'Deployment to Kubernetes is successful'
+            }
+        }
     }
 }
+
+
 
