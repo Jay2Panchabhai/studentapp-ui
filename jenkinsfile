@@ -33,6 +33,14 @@ pipeline {
             }
         }
 
+        stage('Artifacts upload to S3') {
+            steps {
+                sh '''
+                aws s3 cp target/studentapp-2.2-SNAPSHOT.war s3://mayur-jenkins-bucket/
+                '''
+            }
+        }
+
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonar') {
@@ -107,3 +115,4 @@ pipeline {
         }
     }
 }
+
