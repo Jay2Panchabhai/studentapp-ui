@@ -25,10 +25,10 @@ pipeline {
             }
         }
 
-        post {
-            success {
-                archiveArtifacts 'target/*.war'
-                sh 'ls -la'
+            post {
+                success {
+                    archiveArtifacts 'target/*.war'
+                    sh 'ls -la'
                 }
             }
     }
