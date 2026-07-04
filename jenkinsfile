@@ -1,4 +1,4 @@
-https://github.com/Jay2Panchabhai/studentapp-ui.gitpipeline {
+pipeline {
     agent {
         label 'worker'
     }
@@ -6,7 +6,7 @@ https://github.com/Jay2Panchabhai/studentapp-ui.gitpipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Jay2Panchabhai/studentapp-ui.git'
+                git 'https://github.com/mayurpandit25/studentapp-ui.git'
                 echo 'Cloning is successful'
             }
         }
